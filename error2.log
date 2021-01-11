@@ -1,0 +1,11 @@
+[ 79% 90408/113314] build out/target/product/sirius/obj/ETC/system_ext_sepolicy.cil_intermediates/system_ext_sepolicy.cil
+FAILED: out/target/product/sirius/obj/ETC/system_ext_sepolicy.cil_intermediates/system_ext_sepolicy.cil
+/bin/bash -c "(ASAN_OPTIONS=detect_leaks=0 out/host/linux-x86/bin/checkpolicy -M -C -c 	30 -o out/target/product/sirius/obj/ETC/system_ext_sepolicy.cil_intermediates/system_ext_sepolicy.cil out/target/product/sirius/obj/ETC/system_ext_sepolicy.cil_intermediates/system_ext_policy.conf ) && (out/host/linux-x86/bin/build_sepolicy -a out/host/linux-x86/bin filter_out 		-f out/target/product/sirius/obj/ETC/plat_sepolicy.cil_intermediates/plat_sepolicy.cil -t out/target/product/sirius/obj/ETC/system_ext_sepolicy.cil_intermediates/system_ext_sepolicy.cil ) && (grep -v ';;' out/target/product/sirius/obj/ETC/system_ext_sepolicy.cil_intermediates/system_ext_sepolicy.cil > out/target/product/sirius/obj/ETC/system_ext_sepolicy.cil_intermediates/system_ext_sepolicy.cil.tmp ) && (mv out/target/product/sirius/obj/ETC/system_ext_sepolicy.cil_intermediates/system_ext_sepolicy.cil.tmp out/target/product/sirius/obj/ETC/system_ext_sepolicy.cil_intermediates/system_ext_sepolicy.cil ) && (out/host/linux-x86/bin/secilc -m -M true -G -c 30 		 out/target/product/sirius/obj/ETC/plat_sepolicy.cil_intermediates/plat_sepolicy.cil out/target/product/sirius/obj/ETC/system_ext_sepolicy.cil_intermediates/system_ext_sepolicy.cil -o /dev/null -f /dev/null )"
+neverallow check failed at out/target/product/sirius/obj/ETC/system_ext_sepolicy.cil_intermediates/system_ext_sepolicy.cil:3076
+  (neverallow base_typeattr_813 vendor_sigmahal_hwservice (hwservice_manager (find)))
+    <root>
+    allow at out/target/product/sirius/obj/ETC/plat_sepolicy.cil_intermediates/plat_sepolicy.cil:6892
+      (allow base_typeattr_221 hwservice_manager_type (hwservice_manager (add find)))
+    <root>
+    allow at out/target/product/sirius/obj/ETC/system_ext_sepolicy.cil_intermediates/system_ext_sepolicy.cil:597
+      (allow base_typeattr_224 hwservice_manager_type (hwservice_manager (add find))) 
